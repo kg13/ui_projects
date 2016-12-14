@@ -28,6 +28,9 @@ th:hover{
  background-color: red
 }
 table,tr,td{
+    text-align: center;
+    margin: auto;
+    padding: 12px;
     border: solid 1px
 
 }
