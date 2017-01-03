@@ -4,24 +4,33 @@
         <title>form</title>
        <script type="text/javascript" src="../scripts/process.js"></script>
         <body>
-            <form name="get form" method="post">
+            <form name="get form" method="get">
             <table>
                 <tr>
                     <td>First Name</td>
                     <td>
-                       <input type="text" name="FirstName" id="FirstName" value="" placeholder="Enter First Name">
+                       <input type="text" name="firstName" id="fn" value="" placeholder="Enter First Name">
+                    </td>
+                    <td id="fnErr" class="hide">
+                       Please Enter a valid first name
                     </td>
                 </tr>
                 <tr>
                     <td>Last Name</td>
                     <td>
-                       <input type="text" name="LastName" id="Lastname" value="" placeholder="Enter Last Name">
+                       <input type="text" name="lastName" id="ln" value="" placeholder="Enter Last Name">
                     </td>
+                   <td id="ln" class="hide">
+                       Please Enter a valid last name
+                   </td>
                 </tr>
                 <tr>
                     <td>Address</td>
                     <td>
-                       <input type="text" name="Address" id="Address" value="" placeholder="Enter Address">
+                       <input type="text" name="address" id="add" value="" placeholder="Enter Address">
+                    </td>
+                    <td id="addErr" class="hide">
+                       Please Enter a valid Address
                     </td>
                 </tr>
                 <tr>
@@ -29,14 +38,59 @@
                    <td>
                       <input type="Password" name="Password" id="Password" value="" placeholder="Enter Password">
                    </td>
+                   <td id="passwordErr" class="hide">
+                       Please Enter a valid Password 
+                   </td>
                 </tr>
                <tr>
-                  <td colspan="2">
-                     <input type="Submit" onclick="processForm()" value="Submit">
-                  </td>
-               </tr>
-            </table>
+                  <td>Gender</td>
+                     <td>
+                        <input type ="radio" name ="gender" value="male" id = "genMale">Male
+                        <input type ="radio" name ="gender" value="female" id = "genFemale">Female
+                        <input type ="radio" name ="gender" value="female" id = "others">Others
+                     </td>
+                     <td id="genderErr" class="hide">
+                       Please Enter a valid gender
+                     </td>
+                  </tr>
+                
+                <tr>
+                   <td>Cars</td>
+                 <td>
+                   <select name="cars" id="cars">
+                   <input type="checkbox" value="toyota" name="toyota">Toyota
+                   <input type="checkbox" value="bmw" name="bmw">BMW
+                   <input type="checkbox" value="honda" name="honda">Honda
+                   </select>
+                    <td id="carsErr" class="hide">
+                     Please select cars
+                    </td>
+                </td>
+                </tr>
+                
+                <tr>
+                    <td>Country</td>
+                    <td>
+                       <select name="country" id="country">
+                        <option value="-1" selected disabled>Select a Country</option> 
+                        <option value="1" >Nepal</option>
+                        <option value="2" >UK</option>
+                        <option value="3" >USA</option>
+                        <option value="4" >India</option>
+                       </select>
+                    </td> 
+                    <td id="countryErr" class="hide">
+                     Please select valid country
+                    </td>
+                </tr>
+                     <tr>
+                        <td rowspan= "4" colspan="3">
+                         <input type="Submit" onclick="processform()" value="Submit"/>
+                        </td>
+                     </tr>
+               </table>
             </form>
+              <div id="rs">Results will be displayed here</div>
         </body>
     </head>
 </html>
